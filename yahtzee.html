@@ -1,188 +1,161 @@
 <!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--	<head>-->
-<!--		<title>Michelle Zhao</title>-->
-<!--	</head>-->
-<!--	<body>-->
-<!--		<nav>-->
-<!--    		<ul>-->
-<!--        		<li><a href="/">Home</a></li>-->
-<!--	        	<li><a href="/about">About</a></li>-->
-<!--        		<li><a href="/cv">CV</a></li>-->
-<!--        		<li><a href="/blog">Blog</a></li>-->
-<!--    		</ul>-->
-<!--		</nav>-->
-<!--		<div class="container">-->
-<!--    		<div class="blurb">-->
-<!--        		<h1>STILL WORKING ON THIS!</h1>-->
-<!--    		</div>&lt;!&ndash; /.blurb &ndash;&gt;-->
-<!--		</div>&lt;!&ndash; /.container &ndash;&gt;-->
-<!--		<footer>-->
-<!--    		<ul>-->
-<!--        		<li><a href="https://github.com/mzhao98">github.com/mzhao98</a></li>-->
-<!--			</ul>-->
-<!--		</footer>-->
-<!--	</body>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--<title>Page Title</title>-->
+<!--<meta charset="UTF-8">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--<style>-->
+<!--* {-->
+<!--  box-sizing: border-box;-->
+<!--}-->
+
+<!--body {-->
+<!--  font-family: Arial, Helvetica, sans-serif;-->
+<!--  margin: 0;-->
+<!--}-->
+
+<!--/* Style the header */-->
+<!--.header {-->
+<!--  padding: 80px;-->
+<!--  text-align: center;-->
+<!--  background: #550a8a;-->
+<!--  color: white;-->
+<!--}-->
+
+<!--/* Increase the font size of the h1 element */-->
+<!--.header h1 {-->
+<!--  font-size: 40px;-->
+<!--}-->
+
+<!--/* Style the top navigation bar */-->
+<!--.navbar {-->
+<!--  overflow: hidden;-->
+<!--  background-color: #333;-->
+<!--}-->
+
+<!--/* Style the navigation bar links */-->
+<!--.navbar a {-->
+<!--  float: left;-->
+<!--  display: block;-->
+<!--  color: white;-->
+<!--  text-align: center;-->
+<!--  padding: 14px 20px;-->
+<!--  text-decoration: none;-->
+<!--}-->
+
+<!--/* Right-aligned link */-->
+<!--.navbar a.right {-->
+<!--  float: right;-->
+<!--}-->
+
+<!--/* Change color on hover */-->
+<!--.navbar a:hover {-->
+<!--  background-color: #ddd;-->
+<!--  color: black;-->
+<!--}-->
+
+<!--/* Column container */-->
+<!--.row {-->
+<!--  display: flex;-->
+<!--  flex-wrap: wrap;-->
+<!--}-->
+
+<!--/* Create two unequal columns that sits next to each other */-->
+<!--/* Sidebar/left column */-->
+<!--.side {-->
+<!--  flex: 30%;-->
+<!--  background-color: #f1f1f1;-->
+<!--  padding: 20px;-->
+<!--}-->
+
+<!--/* Main column */-->
+<!--.main {-->
+<!--  flex: 70%;-->
+<!--  background-color: white;-->
+<!--  padding: 20px;-->
+<!--}-->
+
+<!--/* Fake image, just for this example */-->
+<!--.fakeimg {-->
+<!--  background-color: #aaa;-->
+<!--  width: 100%;-->
+<!--  padding: 20px;-->
+<!--}-->
+
+<!--/* Footer */-->
+<!--.footer {-->
+<!--  padding: 20px;-->
+<!--  text-align: center;-->
+<!--  background: #ddd;-->
+<!--}-->
+
+<!--/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */-->
+<!--@media screen and (max-width: 700px) {-->
+<!--  .row {-->
+<!--    flex-direction: column;-->
+<!--  }-->
+<!--}-->
+
+<!--/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */-->
+<!--@media screen and (max-width: 400px) {-->
+<!--  .navbar a {-->
+<!--    float: none;-->
+<!--    width:100%;-->
+<!--  }-->
+<!--}-->
+<!--</style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="header">-->
+<!--  <h1>Yahtzee!</h1>-->
+<!--  <p>A Yahtzee-Playing Robot.</p>-->
+<!--</div>-->
+
+<!--<div class="navbar">-->
+<!--  <a href="index.html">Home</a>-->
+<!--  <a href="projects.html">Back to Projects</a>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--  <div class="main">-->
+<!--    <h2>Construction of a Yahtzee-Playing Robotic Arm</h2>-->
+<!--	<ul style="list-style-type:disc;">-->
+<!--      <li>Designed a robotic arm using HEBI motors</li>-->
+<!--      <li>Connected motors to ROS (robot operating system) nodes using C++</li>-->
+<!--      <li>ROS is a robot operating framework that separates robotic parts into separate nodes. Each node can be controlled by subscribing and publishing to a centralized cloud of a commands.</li>-->
+<!--      <li>Each node can either listen or send commands</li>-->
+<!--      <li>Creates a Central Gameplay Controller node, a Robot Movement controller node, a Dice Detection Node, a Camera node.</li>-->
+<!--      <li>Laser cut linkages between motors to act as the arms of the robot.</li>-->
+<!--      <li>Implemented inverse kinematics to control the robot by specifying end position.</li>-->
+<!--      <li>Used OpenCV, a computer vision library, to obtain the contours of the dice and located the circles on the dice.</li>-->
+<!--      <li>Implemented Yahtzee gameplay logic in C++.</li>-->
+
+<!--  </ul>-->
+<!--      <img src="rob1.png" alt="rob1" width="300" height="400">-->
+<!--      <img src="rob2.png" alt="rob2" width="300" height="400">-->
+
+<!--      <ul style="list-style-type:disc;">-->
+<!--          <li> Movement Node: The movement node utilized the inverse kinematics to command the robot to move to different locations in the workspace. The start and end point of the robot included interpolation points in order to move along the trajectory more smoothly.</li>-->
+<!--          <li> Dice Detection Node: The dice detection nodes used the camera image to return the number of dice as well as their values in the workspace based on the pip count of the dice.-->
+<!--</li>-->
+<!--          <li> Gameplay Node: The game play node rolls the dice by placing them in a cup and then maneuvering the cup to dump out the dice. It keeps track of the Yahtzee score per player and takes as input user commands for the next plays.-->
+<!--</li>-->
+<!--          <li> Camera Node: The camera node interprets frames of the camera and locates the dice location.-->
+<!--</li>-->
+<!--      </ul>-->
+
+
+
+
+
+<!--    </p>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div class="footer">-->
+<!--  <h2>Ye</h2>-->
+<!--</div>-->
+
+<!--</body>-->
 <!--</html>-->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-/* Style the header */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #550a8a;
-  color: white;
-}
-
-/* Increase the font size of the h1 element */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Column container */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width:100%;
-  }
-}
-</style>
-</head>
-<body>
-
-<div class="header">
-  <h1>Yahtzee!</h1>
-  <p>A Yahtzee-Playing Robot.</p>
-</div>
-
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="projects.html">Back to Projects</a>
-</div>
-
-</div>
-  <div class="main">
-    <h2>Construction of a Yahtzee-Playing Robotic Arm</h2>
-	<ul style="list-style-type:disc;">
-      <li>Designed a robotic arm using HEBI motors</li>
-      <li>Connected motors to ROS (robot operating system) nodes using C++</li>
-      <li>ROS is a robot operating framework that separates robotic parts into separate nodes. Each node can be controlled by subscribing and publishing to a centralized cloud of a commands.</li>
-      <li>Each node can either listen or send commands</li>
-      <li>Creates a Central Gameplay Controller node, a Robot Movement controller node, a Dice Detection Node, a Camera node.</li>
-      <li>Laser cut linkages between motors to act as the arms of the robot.</li>
-      <li>Implemented inverse kinematics to control the robot by specifying end position.</li>
-      <li>Used OpenCV, a computer vision library, to obtain the contours of the dice and located the circles on the dice.</li>
-      <li>Implemented Yahtzee gameplay logic in C++.</li>
-
-  </ul>
-      <img src="rob1.png" alt="rob1" width="300" height="400">
-      <img src="rob2.png" alt="rob2" width="300" height="400">
-
-      <ul style="list-style-type:disc;">
-          <li> Movement Node: The movement node utilized the inverse kinematics to command the robot to move to different locations in the workspace. The start and end point of the robot included interpolation points in order to move along the trajectory more smoothly.</li>
-          <li> Dice Detection Node: The dice detection nodes used the camera image to return the number of dice as well as their values in the workspace based on the pip count of the dice.
-</li>
-          <li> Gameplay Node: The game play node rolls the dice by placing them in a cup and then maneuvering the cup to dump out the dice. It keeps track of the Yahtzee score per player and takes as input user commands for the next plays.
-</li>
-          <li> Camera Node: The camera node interprets frames of the camera and locates the dice location.
-</li>
-      </ul>
-
-
-
-
-
-    </p>
-  </div>
-</div>
-
-<div class="footer">
-  <h2>Ye</h2>
-</div>
-
-</body>
-</html>
