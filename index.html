@@ -37,6 +37,7 @@
 								<li><a href="projects.html">Projects</a></li>
 								<li><a href="blog.html">Blog</a></li>
 								<li><a href="publications.html">Publications</a></li>
+                                <li><a href="photos.html">Photography</a></li>
 								<li><a href="contact.html">Contact</a></li>
 
 							</ul>
@@ -49,8 +50,8 @@
 					<header>
 						<h3>San Diego, CA || Pasadena, CA || Pittsburgh, PA </h3>
 						<p>
-							Hi. I'm a fourth year undergraduate at Caltech, studying Computer Science. <br>
-							My focus is on statistical machine learning and online decision making. <br>
+							Hi. I'm a fourth year undergraduate at Caltech, studying Computer Science, <br>
+							with a focus on statistical machine learning and online decision making. <br>
 							I also love running.
 						</p>
 					</header>
@@ -85,6 +86,22 @@
 							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
 						</article>
 
+						<article>
+							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
 					</div>
 				</section>
 
@@ -92,26 +109,36 @@
 				<div class="wrapper style2">
 
 					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+						<a href="#" class="image featured"><img src="images/al.png" alt="" /></a>
 						<header>
-							<h2><a href="#">Sed massa imperdiet magnis</a></h2>
+							<h2><a href="#">Active Learning</a></h2>
 							<p>
-								Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
-								pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
+								Introduction to Active Learning
 							</p>
 						</header>
 						<p>
-							Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-							posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-							sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam
-							mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan
-							lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-							consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-							interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-							natoque aenean scelerisque.
+							Active learning is a machine learning framework in which the learning algorithm can
+                            interactively query a user (teacher or oracle) to label new data points with the true labels.
+                            The process of active learning is also referred to as optimal experimental design.
+                            <br><br>
+                            The motivation for active learning is a scenario in which we have a large pool of unlabelled data.
+                            Consider the problem of training an image classification model to distinguish between cats and dogs.
+                            There are millions of images out there of each, but not all of them are needed to train a good model.
+                            Some images may offer more clarity and information than others. Another similar application is
+                            classifying the content of Youtube videos, where the data is inherently dense and there exists a
+                            lot of it.
+                            <br><br>
+                            Passive learning, the standard framework in which a large quantity of labelled data is passed
+                            to the algorithm, requires significant effort in labelling the entire set of data. By using active learning,
+                            we can selectively leverage a system like crowd-sourcing, to ask
+                            human experts to selectively label some items in the data set, but not have to label the entirety.
+                            The algorithm iteratively selects the most informative examples based on some value metric and sends
+                            those unlabelled examples to a labelling oracle, who returns the true labels for those queried examples
+                            back to the algorithm.
 						</p>
 						<footer>
-							<a href="#" class="button">Continue Reading</a>
+							<a href="https://towardsdatascience.com/introduction-to-active-learning-117e0740d7cc"
+							   class="button">Continue Reading</a>
 						</footer>
 					</article>
 
