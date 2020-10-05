@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Blog</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="publications.html">Publications</a></li>
+                                <li><a href="photos.html">Photography</a></li>
+
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<p> I write my blog through Medium, so all of the links will redirect you to the Medium blog posts.
+						</p>
+
+						<article id="AL" class="container special">
+							<header>
+								<h2>Introduction to Active Learning</h2>
+							</header>
+							<p>
+								Active learning is a machine learning framework in which the learning algorithm can
+								interactively query a user (teacher or oracle) to label new data points with the true labels.
+								The process of active learning is also referred to as optimal experimental design.
+								<br><br>
+								The motivation for active learning is a scenario in which we have a large pool of unlabelled data.
+								Consider the problem of training an image classification model to distinguish between cats and dogs.
+								There are millions of images out there of each, but not all of them are needed to train a good model.
+								Some images may offer more clarity and information than others. Another similar application is
+								classifying the content of Youtube videos, where the data is inherently dense and there exists a
+								lot of it.
+								<br><br>
+								Passive learning, the standard framework in which a large quantity of labelled data is passed
+								to the algorithm, requires significant effort in labelling the entire set of data. By using active learning,
+								we can selectively leverage a system like crowd-sourcing, to ask
+								human experts to selectively label some items in the data set, but not have to label the entirety.
+								The algorithm iteratively selects the most informative examples based on some value metric and sends
+								those unlabelled examples to a labelling oracle, who returns the true labels for those queried examples
+								back to the algorithm.
+							</p>
+							<footer>
+								<a href="https://towardsdatascience.com/introduction-to-active-learning-117e0740d7cc"
+								   class="button">Link to Article</a>
+							</footer>
+						</article>
+
+						<article id="RL" class="container special">
+							<header>
+								<h2>Understanding Reinforcement Learning through Multi-Armed Bandits</h2>
+							</header>
+							<p>
+								Reinforcement learning (RL) is a direction of machine learning that stems from
+								observing how humans interact with their environment.
+								<br><br>
+								In order to better introduce RL, we first understand it in the context of human learning.
+								When a child enters a new environment (ie. a room filled with toys), he has no idea of
+								what the goals in the environment are. Instead, he performs essentially random tasks,
+								learning new things about his environment as he does the actions. For example,
+								he randomly picks up a sharp toy and realizes the sharp toy causes pain. He selects
+								a box and finds a snack inside. Through this episode, the child is learning.
+								The child learns that sharp objects cause pain, and boxes might contain useful items
+								inside, thus developing a set of rules that help to guide his later decisions in the
+								environment. The child is learning through reinforcement from the environment.
+								<br><br>
+								Reinforcement learning is characterized by a learning framework. The learning objective
+								is to direct an agent to achieve a goal by interacting with an environment. RL differs
+								from supervised learning in the instructiveness of information received from the expert supervisor.
+							</p>
+							<footer>
+								<a href="https://medium.com/@michelledzhao/understanding-reinforcement-learning-through-multi-armed-bandits-39095dee6846"
+								   class="button">Link to Article</a>
+							</footer>
+						</article>
+
+					</div>
+
+				</div>
+
+
+			<!-- Features -->
+				<div class="wrapper style1">
+
+					<section id="features" class="container special">
+						<header>
+							<h2>Miscellaneous</h2>
+							<p>miscellaneous stories and musings</p>
+						</header>
+						<div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="images/medal.jpg" alt="" /></a>
+								<header>
+									<h3><a href="#">My LA Marathon Experience</a></h3>
+								</header>
+								<p>
+									Decided to run a marathon. Didn't train. Felt pain.
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="images/cenote.jpg" alt="" /></a>
+								<header>
+									<h3><a href="#">Incredible Cenotes</a></h3>
+								</header>
+								<p>
+									Cenote (xenotes) are natural pits, or sinkholes, that are caused by collapsed limestone
+									bedrock. They are very common in the Yucatán Peninsula of Mexico. Be sure to see them on a
+									trip to Cancun, Mexico.
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="images/lake.jpg" alt="" /></a>
+								<header>
+									<h3><a href="#">Reflections After Applying to Grad School</a></h3>
+								</header>
+								<p>
+									In my opinion, grad school applications were by far more pleasant than college
+									applications for undergrad. Here are some of the resources I found the most helpful.
+								</p>
+							</article>
+						</div>
+					</section>
+
+				</div>
+
+<!--			&lt;!&ndash; Carousel &ndash;&gt;-->
+<!--				<section class="carousel">-->
+<!--					<div class="reel">-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Pulvinar sagittis congue</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Fermentum sagittis proin</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Sed quis rhoncus placerat</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Ultrices urna sit lobortis</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Varius magnis sollicitudin</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Pulvinar sagittis congue</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Fermentum sagittis proin</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Sed quis rhoncus placerat</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Ultrices urna sit lobortis</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--						<article>-->
+<!--							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>-->
+<!--							<header>-->
+<!--								<h3><a href="#">Varius magnis sollicitudin</a></h3>-->
+<!--							</header>-->
+<!--							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>-->
+<!--						</article>-->
+
+<!--					</div>-->
+<!--				</section>-->
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<hr />
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Contact</h3>
+										</header>
+										<ul class="icons">
+											<li><a href="https://www.instagram.com/michelllezzz/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="https://www.pinterest.com/michelledzhao/" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+											<li><a href="https://github.com/mzhao98" class="icon brands fa-github"><span class="label">Github</span></a></li>
+											<li><a href="https://www.linkedin.com/in/michelle-zhao-a0bb61132/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
