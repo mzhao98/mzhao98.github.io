@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Tutorial Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .code-snippet {
+            background-color: #f4f4f4;
+            border-left: 3px solid #f36d33;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 15px;
+            margin: 15px 0;
+            overflow: auto;
+        }
+        .text-description {
+            margin: 15px 0;
+        }
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Preference Learning</h1>
+
+        <!-- Section 1 -->
+        <div class="text-description">
+            <h2>Introduction</h2>
+            <p>
+                We'll consider a synthetic dataset of preference data.
+            </p>
+        </div>
+        <div class="code-snippet">
+            <pre><code>
+choice_beliefs = {}
+for keynum in trajs:
+    choice_beliefs[keynum] = 1/len(trajs)
+
+probs_of_true = [1/len(trajs)]
+for i in range(len(pairwise_dataset)):
+    o1, o2 = pairwise_dataset[i]['comparison']
+    o1_features = trajs[o1]['sum_feature_vector']
+    o2_features = trajs[o2]['sum_feature_vector']
+
+    choice_i = pairwise_dataset[i]['choice']
+
+    Z = 0
+
+    for candidate_keynum in choice_beliefs:
+        candidate_w = trajs[candidate_keynum]['w']
+        o1_rew = np.dot(o1_features, candidate_w)
+        o2_rew = np.dot(o2_features, candidate_w)
+
+        rews = [float(o1_rew), float(o2_rew)]
+        print("o1_rew", o1_rew)
+        print("o2_rew", o2_rew)
+        norm_rews = [(float(i) - min(rews)) / (1 if (max(rews) - min(rews)) == 0 else (max(rews) - min(rews))) for i in rews]
+        print("norm_rews", norm_rews)
+        o1_rew = norm_rews[0]
+        o2_rew = norm_rews[1]
+
+        print("o1_rew", o1_rew)
+        print("o2_rew", o2_rew)
+
+        if choice_i == 1:
+            prob_w_given_choice = np.exp(o1_rew)/(np.exp(o1_rew) + np.exp(o2_rew))
+        else:
+            prob_w_given_choice = np.exp(o2_rew)/(np.exp(o1_rew) + np.exp(o2_rew))
+
+        choice_beliefs[candidate_keynum] = choice_beliefs[candidate_keynum] * prob_w_given_choice
+        Z += choice_beliefs[candidate_keynum]
+
+    for candidate_keynum in choice_beliefs:
+        choice_beliefs[candidate_keynum] = choice_beliefs[candidate_keynum]/Z
+
+    probs_of_true.append(choice_beliefs[0])
+            </code></pre>
+        </div>
+
+        <!-- Repeat the pattern for additional sections -->
+
+    </div>
+</body>
+</html>

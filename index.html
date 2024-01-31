@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-      <link rel="icon" href="images/robot_icon.png,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
-<!--    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">-->
+<!--      <link rel="icon" href="images/robot_icon.png,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">-->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
   </head>
 
   <body>
@@ -65,6 +65,36 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+
+          <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/strats2.png" alt="clean-usnob" width="160" height="160">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://openreview.net/pdf?id=7CtUcT_OHmC">
+                  <span class="papertitle">Multi-Agent Strategy Explanations for Human-Robot Collaboration</span>
+                </a>
+                <br>
+                Ravi Pandya*, <strong>Michelle Zhao*</strong>, Changliu Liu, Reid Simmons, Henny Admoni
+                <br>
+                <em>ICRA</em>, 2024
+                <br>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Gu4eXZwAAAAJ&citation_for_view=Gu4eXZwAAAAJ:W7OEmFMy1HYC">paper</a> /
+                <a href="data/zhao_topics_adaptation_2022.bib">bibtex</a>
+<!--                <a href="https://drive.google.com/file/d/12x8mhqpFsA6p0u6ZQW-ieRKF8hlQBKKe/view?usp=sharing">poster</a> /-->
+<!--                <a href="http://www.youtube.com/watch?v=NnePYprvFvA">video</a>-->
+                <p>
+                    In this work, we investigate how to generate multi-agent strategy explanations for
+                    human-robot collaboration. We formulate the problem using a generic multi-agent planner, show how
+                    to generate visual explanations through strategy-conditioned landmark states and generate textual
+                    explanations by giving the landmarks to an LLM.
+                </p>
+              </td>
+            </tr>
+
+
+
+
           <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <img src="images/baisl_robots.png" alt="clean-usnob" width="160" height="160">
@@ -83,9 +113,7 @@
 <!--                <a href="https://drive.google.com/file/d/12x8mhqpFsA6p0u6ZQW-ieRKF8hlQBKKe/view?usp=sharing">poster</a> /-->
 <!--                <a href="http://www.youtube.com/watch?v=NnePYprvFvA">video</a>-->
                 <p>
-                  Effective teams align their actions to optimize task performance while
-                  satisfying each team member's constraints to the greatest extent possible. We propose a framework for
-                  representing human and robot contribution constraints in collaborative human-robot tasks. Additionally,
+                  We propose a method for representing human and robot contribution constraints in collaborative human-robot tasks. Additionally,
                   we present an approach for learning a human partner's contribution constraint online during a
                   collaborative interaction. We evaluate our approach using a variety of simulated human partners in
                   a collaborative decluttering task.
@@ -115,8 +143,7 @@
                   This paper presents a framework for defining artificial intelligence (AI) that adapts to individuals within a group,
                   and discusses the technical challenges for collaborative AI systems that must work with different human partners.
                   Collaborative AI is not one-size-fits-all, and thus AI systems must tune their output based on each human partner's
-                  needs and abilities. We explain the role of this AI adaptation formalism in dyadic
-                  human–AI interactions and examine its application through a case study in a simulated navigation domain.
+                  needs and abilities. 
                 </p>
               </td>
             </tr>
@@ -142,10 +169,7 @@
                   transforming team actions into low dimensional representations using hidden Markov models, we can
                   identify strategies without prior knowledge. Robot policies are learned on each of the identified
                   strategies to construct a Mixture-of-Experts model that adapts to the task strategies of unseen human
-                  partners. We evaluate our model on a collaborative cooking task using an Overcooked simulator. Results
-                  of an online user study with 125 participants demonstrate that our framework improves the task
-                  performance and collaborative fluency of human-agent teams, as compared to state of the art
-                  reinforcement learning methods.
+                  partners.
                 </p>
               </td>
             </tr>
@@ -168,10 +192,7 @@
                 <a href="data/zhao_topics_adaptation_2022.bib">bibtex</a>
                 <p>We show by learning the set of hidden states representing a team’s observed collaborative process
                   behaviors over time, we both learn information about the team’s collective intelligence (CI), predict how CI will evolve in
-                  the future, and suggest when an agent might intervene to improve team performance. Based on the
-                  model’s observations, we discuss how it can help agents diagnose teamwork and possibly make interventions
-                  to improve CI by identifying areas of collaborative process (collective effort, skill use, or task
-                  strategy) that could be improved.
+                  the future, and suggest when an agent might intervene to improve team performance.
                 </p>
               </td>
             </tr>
@@ -210,9 +231,7 @@
                   human and robot should contribute to the task. This reward, which is known only to the robot, is
                   joint over human and robot actions, and encompasses constraints over how the human and robot should
                   contribute to a task. By adapting existing machine teaching frameworks for our collaborative domain,
-                  we seek to provide a minimal number of demonstrations such that a human can learn the rewards. We
-                  test the ability of human partners to learn an optimal collaborative policy based on demonstrations
-                  from the robot, and evaluate the effect of learning on team performance in a collaborative task.
+                  we seek to provide a minimal number of demonstrations such that a human can learn the rewards.
                 </p>
 
               </td>
@@ -235,9 +254,7 @@
                 <p>
                   We propose a method for generating a customizable quantity of synthetic data that reflects the variability
                   in task execution styles seen in the real-world task, and enables us to train a baseline sequential
-                  model that predicts the next action a participant will take within a cooking activity. Finally,
-                  we present a user study design for evaluating this method with human participants to determine whether
-                  the personalized model provides guidance that is preferable over the baseline.
+                  model that predicts the next action a participant will take within a cooking activity.
                 </p>
               </td>
           </tr>
@@ -299,9 +316,20 @@
               </td>
             </tr>
             
+          </tbody></table>
+          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
 
-            
-            
+
+<!--            <tr>-->
+<!--&lt;!&ndash;              <td style="padding:20px;width:25%;vertical-align:middle">&ndash;&gt;-->
+<!--&lt;!&ndash;                <img src="images/teaching.png" alt="teaching">&ndash;&gt;-->
+<!--&lt;!&ndash;              </td>&ndash;&gt;-->
+<!--              <td width="75%" valign="center">-->
+<!--                <a href="tutorials/hri_intro.html">Tutorial</a>-->
+
+<!--              </td>-->
+<!--            </tr>-->
+
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Markov Decision Processes</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .code-snippet {
+            background-color: #f4f4f4;
+            border-left: 3px solid #f36d33;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 15px;
+            margin: 15px 0;
+            overflow: auto;
+        }
+        .text-description {
+            margin: 15px 0;
+        }
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+        #github-link {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        #github-link a {
+            color: #f39c12;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #github-link a:hover {
+            color: #d35400;
+            text-decoration: underline;
+        }
+        #modules ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #modules ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+        #modules ul li:before {
+            content: '\2022'; /* Unicode for a bullet point */
+            color: #e8491d; /* Change this color to suit your design */
+            font-size: 20px; /* Size of the bullet point */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Markov Decision Processes</h1>
+
+        <!-- Section 1 -->
+        <div class="text-description">
+            <h2>A Basic Introduction</h2>
+            <p>
+                A Markov decision process (MDP) is a stochastic, discrete-time control process. In reinforcement
+                learning (RL), an MDP serves as a mathematical framework for modeling the decision-making of
+                an agent in some environment. Intuitively and perhaps oversimply, we can think of MDPs as
+                modeling some decision-maker (agent), who has a problem to solve (operating properly in some
+                problem-solving environment). Defining an MDP sets up the scenario: agent with the problem to
+                solve. And solving an MDP entails coming up with the "correct" set of actions the agent must
+                take to solve the problem. We'll next discuss the MDP definition.
+
+            </p>
+
+        </div>
+
+
+        <!-- Section 2 -->
+        <div class="text-description">
+            <h2>MDP Definition</h2>
+            <p>
+                An MDP is defined by a tuple of variables \(\langle S,A,T,R,\gamma,P_0 \rangle\).
+            </p>
+            <ol>
+              <li>\(S\) represents the set of states. In other words, this is all of the possible forms the agent's environment could take.</li>
+              <li>\(A\) represents the set of actions available for the agent to take.</li>
+              <li>\(P_0: S \rightarrow \mathcal{R}\) represents the initial state distribution. \(P_0(s)\) for any state \(s \in S\) represents how likely the agent's environment is to start in state \(s\).</li>
+                <li>\(\gamma \in [0,1]\) is the discount factor. This is a scalar value that represents how much the agent cares about future rewards. A discount factor of 0 means the agent only cares about the immediate reward. A discount factor of 1 means the agent cares about all future rewards equally.</li>
+                <li>\(T: S \times A \times S \rightarrow \mathcal{R}\) is the transition function. \(T(s'|s,a)\) gives the probability that the environment transitions to state \(s'\) from state \(s\) after taking action \(a\).</li>
+                <li>\(R: S \times A \rightarrow \mathcal{R}\) represents the agent's objective. The agent's objective is embedded into the environment through the reward. \(R(s,a)\) returns a real valued scalar representing how much reward the agent receives for taking action \(a\) in state \(s\).</li>
+            </ol>
+        </div>
+
+        <div class="text-description">
+            <h2>MDP Definition: Toy Example</h2>
+            <p>
+                The MDP definition is a bit abstract. Let's ground the components of an MDP in a very simple toy example.
+
+                In our toy example, Alice (our agent) has a problem she needs to solve. The problem is that she dropped both a dirty shirt on the ground in the middle of her room. She needs to quickly and efficiently pick up the dirty shirt and place it in the laundry basket.
+
+                We'll represent her room as a 5 by 5 grid. On the upper right side, she has a laundry basket. On the lower right side, she has a dresser. Alice is starting at the lower right side, by the door. The dirty shirt is in the middle of the room.
+
+                An MDP is defined by a tuple of variables \(\langle S,A,T,R,\gamma,P_0 \rangle\).
+            </p>
+            <ol>
+              <li>\(S\) represents the set of states. These are all of the positions that Alice can be in. All of the coordinate positions in the 5x5 room.</li>
+              <li>\(A\) Alice can [move up, down, left, right, pick up shirt, place shirt].</li>
+              <li>\(P_0\): With probability 1, Alice will begin in the lower right corner. This is deterministic.</li>
+                <li>\(T: S \times A \times S \rightarrow \mathcal{R}\) is also deterministic. All of Alice's action will succeed, if the action she is trying to perform is valid.</li>
+                <li>\(R: S \times A \rightarrow \mathcal{R}\) represents the agent's objective. Alice will receive position reward if she places the shirt in the laundry bin. She will receive negative reward if she places the shirt in the dresser, as this will stink up the rest of her clothes.</li>
+            </ol>
+            <h2>Let's make this even more concrete, and get to coding up this toy example!</h2>
+
+        </div>
+
+        <div class="text-description">
+            <p>
+               First, we want to import helpful libraries: Numpy for computation and Matplotlib for visualization of states in the MDP. We'll define a few global variables.
+            </p>
+        </div>
+<!--        <section id="github-link">-->
+<!--            <a href="tutorial_notebooks/Tutorial%20on%20Markov%20Decision%20Processes.ipynb" target="_blank">Download our Interactive Jupyter Notebook here</a>-->
+<!--        </section>-->
+        <div class="code-snippet">
+            <pre><code>
+            import copy
+            import math
+            import numpy as np
+            import pickle
+            import sys
+            import networkx as nx
+            from itertools import product
+            import itertools
+            import matplotlib.pyplot as plt
+
+            DIRTY_SHIRT = 'dirty_shirt'
+            PICKUP = 'pickup'
+            PLACE = 'place'
+            </code></pre>
+        </div>
+
+        <div class="text-description">
+            <p>
+            Next, we'll define the MDP. We'll define the state space, action space, transition function, reward function,
+            and initial state distribution. The state dictionary will be input to the MDP class. The initial state of the MDP
+            will include the agent's initial position, the position of the laundry basket (g1), the position of the dresser (g2),
+            and the position of the dirty shirt. The reward dictionary will be input to the MDP class. The reward dictionary
+            will include the target object (dirty shirt), and the target goal, where the dirty shirt should be placed (g1).
+            </p>
+            <div class="code-snippet">
+                <pre><code>
+                state = {
+                    'start_pos': (0,0),
+                    'g1': (4,4),
+                    'g2': (4,0),
+                    'dirty_shirt_positions': [(1,3)],
+                }
+                reward = {
+                    'target_object': DIRTY_SHIRT,
+                    'target_goal': 'g1',
+                }
+                </code></pre>
+            </div>
+
+        </div>
+
+
+        <div class="text-description">
+            <p>
+            We'll define the MDP class. We'll first initialize the MDP based on the inputs.
+            </p>
+            <div class="code-snippet">
+                <pre><code>
+    class Gridworld():
+        def __init__(self, initial_config, reward_dict):
+            self.reward_dict = reward_dict
+            self.initial_config = initial_config
+
+            self.target_object = reward_dict['target_object']
+            self.target_goal = reward_dict['target_goal']
+
+            self.dirty_shirt_positions = initial_config['dirty_shirt_positions']
+            self.start_pos = initial_config['start_pos']
+            self.g1_laundry_bin = initial_config['g1']
+            self.g2_closet = initial_config['g2']
+            self.objects_in_g1 = None
+            self.objects_in_g2 = None
+
+            self.set_env_limits()
+            self.directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+            self.possible_single_actions = self.make_actions_list()
+            self.current_state = self.create_initial_state()
+            self.num_features = 4
+            self.correct_target_reward = 10
+                </code></pre>
+            </div>
+
+        </div>
+
+        <div class="text-description">
+            <p>
+            We'll create a few functions that will support lookup of actions, setting environment limits, resetting the environment,
+                and creating the initial state.
+            </p>
+            <div class="code-snippet">
+                <pre><code>
+    def make_actions_list(self):
+        actions_list = []
+        actions_list.extend(self.directions)
+        actions_list.append(PICKUP)
+        actions_list.append(PLACE)
+        return actions_list
+
+    def set_env_limits(self):
+        self.x_min = 0
+        self.x_max = 5
+        self.y_min = 0
+        self.y_max = 5
+
+        self.all_coordinate_locations = list(product(range(self.x_min,self.x_max),
+                                                     range(self.y_min, self.y_max)))
+
+    def reset(self):
+        self.current_state = self.create_initial_state()
+
+    def create_initial_state(self):
+        # create dictionary of object location to object type and picked up state
+        state = {}
+        state['pos'] = copy.deepcopy(self.start_pos)
+        state['holding'] = None
+        state['objects_in_g1'] = None
+        state['objects_in_g2'] = None
+        return state
+                </code></pre>
+            </div>
+
+        </div>
+
+
+        <div class="text-description">
+            <p>
+            The next functions support the step function of the environment. The step function takes in an action and returns
+                the next state, reward, and whether the episode is done.
+            </p>
+            <div class="code-snippet">
+                <pre><code>
+    def is_done_given_state(self, current_state):
+        # check if an object has been placed at either the laundry basket or the closet/dresser.
+        if current_state['objects_in_g1'] != None or current_state['objects_in_g2'] != None:
+            return True
+        return False
+
+    def is_valid_push(self, current_state, action):
+        current_loc = current_state['pos']
+        new_loc = tuple(np.array(current_loc) + np.array(action))
+        if new_loc[0] < self.x_min or new_loc[0] >= self.x_max or new_loc[1] < self.y_min or new_loc[1] >= self.y_max:
+            return False
+        return True
+
+
+    def step_given_state(self, input_state, action):
+        step_cost = -0.1
+        current_state = copy.deepcopy(input_state)
+        if self.is_done_given_state(current_state):
+            step_reward = 0
+            return current_state, step_reward, True
+        if action in self.directions:
+            if self.is_valid_push(current_state, action) is False:
+                step_reward = step_cost
+                return current_state, step_reward, False
+        if action == PICKUP:
+            # if not holding anything
+            if current_state['holding'] is None:
+                # check if there is an object to pick up
+                if current_state['pos'] in self.dirty_shirt_positions:
+                    current_state['holding'] = 'dirty_shirt'
+                step_reward = step_cost
+                return current_state, step_reward, False
+            else:
+                step_reward = step_cost
+                return current_state, step_reward, False
+
+        if action == PLACE:
+            if current_state['holding'] is not None:
+                holding_object = current_state['holding']
+                if current_state['pos'] == self.g1_laundry_bin:
+                    current_state['objects_in_g1'] = current_state['holding']
+                    current_state['holding'] = None
+                    step_reward = step_cost
+                    done = self.is_done_given_state(current_state)
+                    if self.target_object == holding_object and self.target_goal == 'g1':
+                        step_reward += self.correct_target_reward
+                        return current_state, step_reward, done
+                elif current_state['pos'] == self.g2_closet:
+                    current_state['objects_in_g2'] = current_state['holding']
+                    current_state['holding'] = None
+                    step_reward = step_cost
+                    done = self.is_done_given_state(current_state)
+                    if self.target_object == holding_object and self.target_goal == 'g2':
+                        step_reward += self.correct_target_reward
+                        return current_state, step_reward, done
+
+                step_reward = step_cost
+                return current_state, step_reward, False
+            else:
+                step_reward = step_cost
+                return current_state, step_reward, False
+
+        current_loc = current_state['pos']
+        new_loc = tuple(np.array(current_loc) + np.array(action))
+        current_state['pos'] = new_loc
+        step_reward = step_cost
+        done = self.is_done_given_state(current_state)
+        return current_state, step_reward, done
+
+                </code></pre>
+            </div>
+
+        </div>
+
+        <div class="text-description">
+            <p>
+            To rollout a policy in the environment, we step through the environment until the episode is done.
+            </p>
+            <div class="code-snippet">
+                <pre><code>
+    def rollout_full_game_joint_optimal(self):
+        self.reset()
+        done = False
+        total_reward = 0
+        iters = 0
+        game_results = []
+        sum_feature_vector = np.zeros(4)
+        while not done:
+            iters += 1
+            current_state_tup = self.state_to_tuple(self.current_state)
+            state_idx = self.state_to_idx[current_state_tup]
+            action_distribution = self.policy[state_idx]
+            action = np.argmax(action_distribution)
+            action = self.idx_to_action[action]
+            game_results.append((self.current_state, action))
+            next_state, team_rew, done = self.step_given_state(self.current_state, action)
+            self.current_state = next_state
+            total_reward += team_rew
+            if iters > 40:
+                break
+        return total_reward, game_results
+                </code></pre>
+            </div>
+
+        </div>
+
+        <div class="text-description">
+            <h2>Value Iteration</h2>
+            <p>
+            To compute a policy, we run value iteration. First, we need to enumerate all states, and convert the
+                transition function into a matrix.
+            </p>
+            <div class="code-snippet">
+                <pre><code>
+    def state_to_tuple(self, current_state):
+        # convert current_state to tuple
+        current_state_tup = []
+        current_state_tup.append(('pos', current_state['pos']))
+        current_state_tup.append(('holding', current_state['holding']))
+        current_state_tup.append(('objects_in_g1', current_state['objects_in_g1']))
+        current_state_tup.append(('objects_in_g2', current_state['objects_in_g2']))
+        return tuple(current_state_tup)
+
+    def tuple_to_state(self, current_state_tup):
+        # convert current_state to tuple
+        current_state_tup = list(current_state_tup)
+        current_state = {}
+        current_state['pos'] = current_state_tup[0][1]
+        current_state['holding'] = current_state_tup[1][1]
+        current_state['objects_in_g1'] = current_state_tup[2][1]
+        current_state['objects_in_g2'] = current_state_tup[3][1]
+
+        return current_state
+
+    def enumerate_states(self):
+        self.reset()
+        actions = self.possible_single_actions
+        G = nx.DiGraph()
+        visited_states = set()
+        stack = [copy.deepcopy(self.current_state)]
+        while stack:
+            state = stack.pop()
+            # convert old state to tuple
+            state_tup = self.state_to_tuple(state)
+            # if state has not been visited, add it to the set of visited states
+            if state_tup not in visited_states:
+                visited_states.add(state_tup)
+            # get the neighbors of this state by looping through possible actions
+            for idx, action in enumerate(actions):
+                if self.is_done_given_state(state):
+                    team_reward = 0
+                    next_state = state
+                    done = True
+                else:
+                    next_state, team_reward, done = self.step_given_state(state, action)
+                new_state_tup = self.state_to_tuple(next_state)
+                if new_state_tup not in visited_states:
+                    stack.append(copy.deepcopy(next_state))
+                # add edge to graph from current state to new state with weight equal to reward
+                G.add_edge(state_tup, new_state_tup, weight=team_reward, action=action)
+
+        states = list(G.nodes)
+        idx_to_state = {i: state for i, state in enumerate(states)}
+        state_to_idx = {state: i for i, state in idx_to_state.items()}
+        action_to_idx = {action: i for i, action in enumerate(actions)}
+        idx_to_action = {i: action for i, action in enumerate(actions)}
+        # construct transition matrix and reward matrix of shape [# states, # states, # actions] based on graph
+        transition_mat = np.zeros([len(states), len(states), len(actions)])
+        reward_mat = np.zeros([len(states), len(actions)])
+        for i in range(len(states)):
+            # get all outgoing edges from current state
+            state = self.tuple_to_state(idx_to_state[i])
+            for action_idx_i in range(len(actions)):
+                action = idx_to_action[action_idx_i]
+                if self.is_done_given_state(state):
+                    team_reward = 0
+                    next_state = state
+                    done = True
+                else:
+                    next_state, team_reward, done = self.step_given_state(state, action)
+                next_state_i = state_to_idx[self.state_to_tuple(next_state)]
+                transition_mat[i, next_state_i, action_idx_i] = 1.0
+                reward_mat[i, action_idx_i] = team_reward
+        self.transitions, self.rewards, self.state_to_idx, \
+        self.idx_to_action, self.idx_to_state, self.action_to_idx = transition_mat, reward_mat, state_to_idx, \
+                                                                    idx_to_action, idx_to_state, action_to_idx
+        return transition_mat, reward_mat, state_to_idx, idx_to_action, idx_to_state, action_to_idx
+                </code></pre>
+            </div>
+        <p>
+        Next, we run value iteration to compute the optimal policy. We use the Bellman equation to compute the
+            optimal value function, and then use the optimal value function to compute the optimal policy.
+        </p>
+        <div class="code-snippet">
+            <pre><code>
+    def vectorized_vi(self):
+        # get number of states and actions
+        n_states = self.transitions.shape[0]
+        n_actions = self.transitions.shape[2]
+
+        # initialize value function
+        pi = np.zeros((n_states, 1))
+        vf = np.zeros((n_states, 1))
+        Q = np.zeros((n_states, n_actions))
+        policy = {}
+
+        for i in range(self.maxiter):
+            # initalize delta
+            delta = 0
+            # perform Bellman update
+            for s in range(n_states):
+                # store old value function
+                old_v = vf[s].copy()
+                # compute new value function
+                Q[s] = np.sum((self.rewards[s] + self.gamma * vf) * self.transitions[s, :, :], 0)
+                vf[s] = np.max(np.sum((self.rewards[s] + self.gamma * vf) * self.transitions[s, :, :], 0))
+                # compute delta
+                delta = np.max((delta, np.abs(old_v - vf[s])[0]))
+            # check for convergence
+            if delta < self.epsilson:
+                break
+        # compute optimal policy
+        for s in range(n_states):
+            pi[s] = np.argmax(np.sum(vf * self.transitions[s, :, :], 0))
+            policy[s] = Q[s, :]
+
+        self.vf = vf
+        self.pi = pi
+        self.policy = policy
+        return vf, pi
+            </code></pre>
+        </div>
+
+        </div>
+
+
+
+
+        <!-- Repeat the pattern for additional sections -->
+
+    </div>
+</body>
+</html>
