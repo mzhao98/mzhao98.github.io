@@ -58,12 +58,75 @@
                 <h2>Research</h2>
                 <p>
                   I'm interested in developing algorithms to enable fluent human-robot coordination and collaboration.
-                  I currently work on projects focused on human-robot collaboration, mutual adaptation, and modeling human behavior.
+                  I currently work on projects focused on uncertainty quantification, human-robot collaboration, adaptation, and modeling human behavior.
                 </p>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+          <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/cdagger_real.png" alt="clean-usnob" width="160" height="160">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://arxiv.org/pdf/2406.07767">
+                  <span class="papertitle">Conformalized Interactive Imitation Learning: Handling Expert Shift and Intermittent Feedback</span>
+                </a>
+                <br>
+                <strong>Michelle Zhao</strong>, Reid Simmons, Henny Admoni, Aaditya Ramdas*, Andrea Bajcsy*
+                <br>
+                <em>Under review, ICLR</em>, 2025
+                <br>
+                <a href="https://cmu-intentlab.github.io/conformalized-interactive-il/">project site</a> /
+<!--                <a href="https://arxiv.org/pdf/2406.07767">paper</a> /-->
+                <a href="data/zhao_conformalized_iclr_2025.bib">bibtex</a> /
+<!--                <a href="https://www.youtube.com/watch?v=rkydo1yUGZY">video</a>-->
+                <p>
+                    In interactive imitation learning (IL), uncertainty quantification offers a way for the learner (i.e. robot)
+                    to contend with distribution shifts encountered during deployment by actively seeking additional feedback
+                    from an expert (i.e. human) online. From the conformal prediction side, we introduce a novel uncertainty
+                    quantification algorithm called intermittent quantile tracking (IQT) that leverages a probabilistic
+                    model of intermittent labels, maintains asymptotic coverage guarantees, and empirically achieves
+                    desired coverage levels. From the interactive IL side, we develop ConformalDAgger, a new approach
+                    wherein the robot uses prediction intervals calibrated by IQT as a reliable measure of deployment-time
+                    uncertainty to actively query for more expert feedback.
+                </p>
+              </td>
+          </tr>
+
+
+          <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/con_teleop.png" alt="clean-usnob" width="160" height="160">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://arxiv.org/pdf/2406.07767">
+                  <span class="papertitle">Conformalized Teleoperation: Confidently Mapping Human Inputs to High-Dimensional Robot Action</span>
+                </a>
+                <br>
+                <strong>Michelle Zhao</strong>, Reid Simmons, Henny Admoni, Andrea Bajcsy
+                <br>
+                <em>RSS</em>, 2024
+                <br>
+                <a href="https://cmu-intentlab.github.io/conformalized-teleoperation/">project site</a> /
+                <a href="https://arxiv.org/pdf/2406.07767">paper</a> /
+                <a href="data/zhao_conformalized_rss_2024.bib">bibtex</a> /
+                <a href="https://www.youtube.com/watch?v=rkydo1yUGZY">video</a>
+                <p>
+                    Assistive robotic arms often have more degrees-of-freedom than a human teleoperator can control with
+                    a low-dimensional input, like a joystick. To overcome this challenge, existing approaches use
+                    data-driven methods to learn a mapping from low-dimensional human inputs to high-dimensional
+                    robot actions. However, determining if such a black-box mapping can confidently infer a user's
+                    intended high-dimensional action from low-dimensional inputs remains an open problem. Our key idea
+                    is to adapt the assistive map at training time to additionally estimate high-dimensional action
+                    quantiles, and then calibrate these quantiles via rigorous uncertainty quantification methods.
+                </p>
+              </td>
+          </tr>
+
+
 
 
           <tr>
@@ -90,7 +153,7 @@
                     explanations by giving the landmarks to an LLM.
                 </p>
               </td>
-            </tr>
+          </tr>
 
 
 
@@ -143,7 +206,7 @@
                   This paper presents a framework for defining artificial intelligence (AI) that adapts to individuals within a group,
                   and discusses the technical challenges for collaborative AI systems that must work with different human partners.
                   Collaborative AI is not one-size-fits-all, and thus AI systems must tune their output based on each human partner's
-                  needs and abilities. 
+                  needs and abilities.
                 </p>
               </td>
             </tr>
