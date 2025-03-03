@@ -1,1 +1,0 @@
-Michelle is a fourth-year Ph.D. Student at the Robotics Institute at Carnegie Mellon University, where she is advised by Professors Henny Admoni and Reid Simmons. Her research is in the area of human-robot interaction, mutual adaptation, and modeling human behavior. She currently works on developing algorithms to enable human-robot coordination and collaboration.
