@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Michelle Zhao"
+title: "Hello! I'm Michelle"
 author_profile: true
 redirect_from: 
   - /about/
