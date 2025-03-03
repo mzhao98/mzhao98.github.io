@@ -26,7 +26,7 @@ author:
   name             : "Michelle Zhao"
   pronouns         : # example: "she/her"  
   bio              : "PhD Candidate at CMU"
-  location         : "Pittsburgh, PA"
+  location         :
   employer         : "Carnegie Mellon University"
   uri              : # URL
   email            : "mzhao2@andrew.cmu.edu"
