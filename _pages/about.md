@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "Hello! I'm Michelle"
+title: "Michelle Zhao"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a fifth-year PhD student in the Robotics Institute at Carnegie Mellon University, working
+Hi, I am a fifth-year PhD student in the Robotics Institute at Carnegie Mellon University, working
 on human-robot collaboration. I am advised by
 [Reid Simmons](https://www.ri.cmu.edu/ri-faculty/reid-simmons/) and
 [Henny Admoni](https://www.ri.cmu.edu/ri-faculty/henny-admoni/),
