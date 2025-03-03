@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I am a fifth-year PhD student in the Robotics Institute at Carnegie Mellon University, working
+I am a fifth-year PhD student in the Robotics Institute at Carnegie Mellon University, working
 on human-robot collaboration. I am advised by
 [Reid Simmons](https://www.ri.cmu.edu/ri-faculty/reid-simmons/) and
 [Henny Admoni](https://www.ri.cmu.edu/ri-faculty/henny-admoni/),
