@@ -4,8 +4,8 @@
 
 .masthead {
   position: fixed;
-  background: var(--global-bg-color);
-  border-bottom: 1px solid var(--global-border-color);
+  background: #7a0018fc;
+  border-bottom: 1px solid #7a0018fc;
   height: $masthead-height;
   top: 0;
   width: 100%;
@@ -47,7 +47,7 @@
 }
 
 .masthead__menu-item {
-  background-color: var(--global-bg-color);
+  background-color: #7a0018fc;
   display: block;
   list-style-type: none;
   white-space: nowrap;
@@ -56,4 +56,31 @@
     padding-right: 2em;
     font-weight: 700;
   }
+}
+
+/* ===== FIX WHITE BAR (greedy-nav) ===== */
+
+.greedy-nav {
+  background: transparent !important;   /* remove white layer */
+}
+
+.greedy-nav .visible-links,
+.greedy-nav .hidden-links {
+  background: transparent !important;
+}
+
+/* ===== WHITE TEXT IN HEADER ===== */
+
+.greedy-nav a,
+.greedy-nav a:visited,
+.masthead a,
+.masthead a:visited,
+.site-title a {
+  color: #ffffff !important;
+}
+
+/* hover */
+.greedy-nav a:hover,
+.masthead a:hover {
+  color: #f3d9df !important;
 }

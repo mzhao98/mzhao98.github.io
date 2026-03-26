@@ -94,10 +94,10 @@
 <!-- start custom head snippets -->
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
-<link rel="icon" type="image/svg+xml" href="http://localhost:4000/images/site-logo.svg"/>
-<link rel="icon" type="image/png" href="http://localhost:4000/images/site-logo.png" sizes="32x32"/>
+<link rel="icon" type="image/svg+xml" href="http://localhost:4000//images/site-logo.svg"/>
+<link rel="icon" type="image/png" href="http://localhost:4000//images/site-logo.png" sizes="32x32"/>
 <!--<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-192x192.png" sizes="192x192"/>-->
-<link rel="manifest" href="http://localhost:4000/images/manifest.json"/>
+<link rel="manifest" href="http://localhost:4000//images/manifest.json"/>
 <link rel="icon" href="/images/site-logo.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 <link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
@@ -130,16 +130,13 @@
             <li class="masthead__menu-item"><a href="http://localhost:4000/publications/">Publications</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/talks/">Talks</a></li>
-          
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/teaching/">Teaching</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/portfolio/">Workshop Organizing</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/bio/">Bio</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -252,7 +249,7 @@
       <h1 class="page__title">Publications</h1>
     
     
-  <div class="wordwrap">You can also find my articles on <a href="https://scholar.google.com/citations?user=Gu4eXZwAAAAJ&hl=en">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can also find a more comprehensive list on <a href="https://scholar.google.com/citations?user=Gu4eXZwAAAAJ&hl=en">my Google Scholar profile</a>.</div>
 
 
 
@@ -279,15 +276,67 @@
         height: auto;
         display: block;
     }
+    .archive h3 {
+      font-family: "Palatino Linotype", "Palatino", Georgia, serif !important;
+      font-size: 1.1em;   /* smaller than h2 */
+      font-weight: 600;
+      margin-top: 1.2em;
+      margin-bottom: 0.4em;
+    }
+    .archive h2 {
+      font-family: "Palatino Linotype", "Palatino", Georgia, serif !important;
+      font-size: 1.2em;   /* smaller than h2 */
+      font-weight: 600;
+      margin-top: 1.2em;
+      margin-bottom: 0.4em;
+    }
 </style>
 
 
-<br><br><h1>Conference Papers</h1><hr />
+<br><br><h3>Conference Papers</h3><hr />
 
 
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
 
+
+  <h2 class="archive__item-title" itemprop="headline">
+        <a href="https://www.roboticsproceedings.org/rss21/p087.pdf" rel="permalink">Optimal Interactive Learning on the Job via Facility Location Planning
+    </a>
+    </h2>
+    Shivam Vats, <strong>Michelle Zhao</strong>, Patrick Callaghan, Mingxi Jia, Maxim Likhachev, Oliver Kroemer, George Konidaris 
+    <br>
+    <em>RSS</em>, 2025
+    <br>
+    <a href="https://optimal-interactive-learning.github.io/">project site</a> /
+    <a href="https://www.roboticsproceedings.org/rss21/p087.pdf">paper</a> /
+    <a href="http://localhost:4000/files/vats2025_coil.bib">bibtex</a>
+<!--                <a href="https://www.youtube.com/watch?v=rkydo1yUGZY">video</a>-->
+
+  <!-- make image 25% of the width, with the text taking up the rest -->
+    <div class="container">
+        <div class="image" style="width: 150px; height: 150px ">
+            <img src="http://localhost:4000/images/ufl_formulation_2.png" alt="Sample Image">
+        </div>
+<!--        <div class="text">-->
+        <!-- make font size smaller-->
+        <div class="text" style="font-size: 0.8em;">
+            <p>
+                We propose COIL (Cost-Optimal Interactive Learning), a multi-task interaction planner 
+                that minimizes human effort across a sequence of tasks by strategically selecting among 
+                three query types (skill, preference, and help). When user preferences are known, we 
+                formulate COIL as an uncapacitated facility location (UFL) problem, which enables 
+                bounded-suboptimal planning in polynomial time using off-the-shelf approximation 
+                algorithms. We extend our formulation to handle uncertainty in user preferences by 
+                incorporating one-step belief space planning, which uses these approximation algorithms 
+                as subroutines to maintain polynomial-time performance.
+
+            </p>
+        </div>
+
+    </div>
+
+  </article>
 
   <h2 class="archive__item-title" itemprop="headline">
         <a href="https://arxiv.org/abs/2410.08852" rel="permalink">Conformalized Interactive Imitation Learning: Handling Expert Shift and Intermittent Feedback
@@ -469,7 +518,7 @@
 </div>
 
 
-<br><br><h1>Journal Articles</h1><hr />
+<br><br><h3>Journal Articles</h3><hr />
 
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -536,7 +585,7 @@
 
 
 
-<br><br><h1>Workshop Papers</h1><hr />
+<br><br><h3>Workshop Papers</h3><hr />
 
 
 <div class="list__item">
@@ -698,8 +747,8 @@
 
 
 <div class="page__footer-copyright">
-  &copy; 2025 Michelle Zhao, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated 2025-03-03
+  &copy; 2026 Michelle Zhao, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  Site last updated 2026-03-26
 </div>
 
       </footer>

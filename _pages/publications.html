@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can also find a more comprehensive list on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
@@ -33,15 +33,67 @@ author_profile: true
         height: auto;
         display: block;
     }
+    .archive h3 {
+      font-family: "Palatino Linotype", "Palatino", Georgia, serif !important;
+      font-size: 1.1em;   /* smaller than h2 */
+      font-weight: 600;
+      margin-top: 1.2em;
+      margin-bottom: 0.4em;
+    }
+    .archive h2 {
+      font-family: "Palatino Linotype", "Palatino", Georgia, serif !important;
+      font-size: 1.2em;   /* smaller than h2 */
+      font-weight: 600;
+      margin-top: 1.2em;
+      margin-bottom: 0.4em;
+    }
 </style>
 
 
-<br><br><h1>Conference Papers</h1><hr />
+<br><br><h3>Conference Papers</h3><hr />
 
 
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
 
+
+  <h2 class="archive__item-title" itemprop="headline">
+        <a href="https://www.roboticsproceedings.org/rss21/p087.pdf" rel="permalink">Optimal Interactive Learning on the Job via Facility Location Planning
+    </a>
+    </h2>
+    Shivam Vats, <strong>Michelle Zhao</strong>, Patrick Callaghan, Mingxi Jia, Maxim Likhachev, Oliver Kroemer, George Konidaris 
+    <br>
+    <em>RSS</em>, 2025
+    <br>
+    <a href="https://optimal-interactive-learning.github.io/">project site</a> /
+    <a href="https://www.roboticsproceedings.org/rss21/p087.pdf">paper</a> /
+    <a href="{{ base_path }}/files/vats2025_coil.bib">bibtex</a>
+<!--                <a href="https://www.youtube.com/watch?v=rkydo1yUGZY">video</a>-->
+
+  <!-- make image 25% of the width, with the text taking up the rest -->
+    <div class="container">
+        <div class="image" style="width: 150px; height: 150px ">
+            <img src="{{ base_path }}/images/ufl_formulation_2.png" alt="Sample Image">
+        </div>
+<!--        <div class="text">-->
+        <!-- make font size smaller-->
+        <div class="text" style="font-size: 0.8em;">
+            <p>
+                We propose COIL (Cost-Optimal Interactive Learning), a multi-task interaction planner 
+                that minimizes human effort across a sequence of tasks by strategically selecting among 
+                three query types (skill, preference, and help). When user preferences are known, we 
+                formulate COIL as an uncapacitated facility location (UFL) problem, which enables 
+                bounded-suboptimal planning in polynomial time using off-the-shelf approximation 
+                algorithms. We extend our formulation to handle uncertainty in user preferences by 
+                incorporating one-step belief space planning, which uses these approximation algorithms 
+                as subroutines to maintain polynomial-time performance.
+
+            </p>
+        </div>
+
+    </div>
+
+  </article>
 
   <h2 class="archive__item-title" itemprop="headline">
         <a href="https://arxiv.org/abs/2410.08852" rel="permalink">Conformalized Interactive Imitation Learning: Handling Expert Shift and Intermittent Feedback
@@ -223,7 +275,7 @@ author_profile: true
 </div>
 
 
-<br><br><h1>Journal Articles</h1><hr />
+<br><br><h3>Journal Articles</h3><hr />
 
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -290,7 +342,7 @@ author_profile: true
 
 
 
-<br><br><h1>Workshop Papers</h1><hr />
+<br><br><h3>Workshop Papers</h3><hr />
 
 
 <div class="list__item">
