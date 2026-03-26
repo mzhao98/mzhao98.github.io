@@ -184,11 +184,25 @@ a:hover {
   margin-bottom: 0.4em;
 }
 
-a {
-  text-decoration: none !important;
-}
-
-a:hover {
+a,
+a:hover,
+a:focus,
+a:active,
+.archive a,
+.archive a:hover,
+.archive a:focus,
+.page__content a,
+.page__content a:hover,
+.page__content a:focus,
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:focus,
+.greedy-nav a,
+.greedy-nav a:hover,
+.greedy-nav a:focus,
+.author__urls a,
+.author__urls a:hover,
+.author__urls a:focus {
   text-decoration: none !important;
 }
 /* ===== RED HEADER BAR ONLY ===== */
