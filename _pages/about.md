@@ -35,8 +35,8 @@ See the <a href="/students">Students</a> page for details. </medium>
 ## News
 <ul class="news-list">
 
-  <li>
-    <!-- <strong>March 2026:</strong>
+  <!-- <li>
+    <strong>March 2026:</strong>
     I accepted an offer to join the 
     <a href="https://luddy.iu.edu/academics/units/computer-science.html">Department of Computer Science</a>
     in the 
