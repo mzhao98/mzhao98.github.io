@@ -210,7 +210,7 @@ See the <a href="/studentrecruitment">Student Recruitment</a> page for details. 
   <li>
     <strong>May 2025:</strong>
     I gave a talk on "Examining the Role of Adaptation in HumanRobot Collaboration" at
-    <a href="https://www.mitre.org/"> the MITRE Corporation </a> HumanMachine Teaming Community of Interest Discussion Session.
+    <a href="https://www.mitre.org/"> the MITRE Corporation </a> Human-Machine Teaming Community of Interest Discussion Session.
   </li>
 
   <li>
