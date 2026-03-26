@@ -183,6 +183,14 @@ a:hover {
   margin-top: 1.2em;
   margin-bottom: 0.4em;
 }
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
 /* ===== RED HEADER BAR ONLY ===== */
 
 /* make ALL header layers red */
