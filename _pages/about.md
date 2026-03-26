@@ -12,7 +12,7 @@ Hi, I am a final-year PhD student in the Robotics Institute at Carnegie Mellon U
 [Henny Admoni](https://www.ri.cmu.edu/ri-faculty/henny-admoni/),
 and am part of the [Human and Robot Partners (HARP) Lab](https://harp.ri.cmu.edu) and
 [Reliable Autonomous Systems Lab (RASL)](https://www.ri.cmu.edu/robotics-groups/reliable-autonomous-systems-lab/). My work has been generously supported
-by the [National Defense Science and Engineering Graduate (NDSEG) Fellowship](https://ndseg.org/), an Uber PhD Fellowship, and a Siebel Scholarship. Previously, I graduated from Caltech with a degree in Computer Science where I worked with [Yuxin Chen](https://yuxinchen.org/) and [Yisong Yue](http://www.yisongyue.com/) on machine teaching, and [Soon-Jo Chung](https://www.eas.caltech.edu/people/sjchung) on distributed control.
+by the [National Defense Science and Engineering Graduate (NDSEG) Fellowship](https://ndseg.org/), an Uber PhD Fellowship, and a Siebel Scholarship. Previously, I graduated from Caltech with a B.S. in Computer Science where I worked with [Yuxin Chen](https://yuxinchen.org/) and [Yisong Yue](http://www.yisongyue.com/) on machine teaching, and [Soon-Jo Chung](https://www.eas.caltech.edu/people/sjchung) on distributed control.
 
 
 **Research**
@@ -20,15 +20,15 @@ by the [National Defense Science and Engineering Graduate (NDSEG) Fellowship](ht
 My research interests lie in the areas of interactive machine learning, reinforcement learning,
 and human robot interaction. I'm interested in developing algorithms to enable fluent, bidirectional human-robot learning and collaboration (see [2-page research statement](files/MZ_research_statement_oct24.pdf)). 
 
-My PhD research develops data-driven robotic algorithms that learn effectively from human feedback, with uncertainty quantification algorithms that enable robots to self-assess when and why their policies are nonperformant, communicate insights with human teachers, and proactively ask for targeted feedback. Grounded in statistical uncertainty quantification and models of human cognition, my approaches embed collaboration into the learning process itself, making robot teaching more intuitive and transparent. My long-term goal is to build <strong>lifelong, collaborative intelligence</strong>: robotic partners that remain helpful even when imperfect, continually learning by shaping strategic human-robot interactions to improve their assistance.
+My PhD research develops data-driven robotic algorithms that learn effectively from human feedback, with uncertainty quantification algorithms that enable robots to self-assess when and why their policies are nonperformant, communicate insights with human teachers, and proactively ask for targeted feedback. My long-term goal is to build <strong>lifelong, collaborative intelligence</strong>: robotic partners that remain helpful even when imperfect, continually learning by shaping strategic human-robot interactions to improve their assistance.
 
-I publish my work in journals and conferences for robotics, machine learning, and cognitive science, including RSS, ICRA, IROS, CoRL, HRI, TopiCS, and ICLR. Teaching and mentorship are very important to me, and students I have mentored have gone on to PhDs in HRI at University of Washington and Colorado School of Mines!
+I publish in journals and conferences for robotics, machine learning, and cognitive science, including RSS, ICRA, IROS, CoRL, HRI, TopiCS, and ICLR. Teaching and mentorship are very important to me, and students I have mentored have gone on to PhDs in HRI at University of Washington and Colorado School of Mines!
 
 
 <!-- <div class="recruiting-box">
 📢 <strong>I am recruiting motivated Ph.D., M.S., and undergraduate students !</strong> <br>
 <medium>I am looking for students interested in robotics, human-robot/AI interaction, and interactive learning.
-See the <a href="/students">Students</a> page for details. </medium>
+See the <a href="/studentrecruitment">Student Recruitment</a> page for details. </medium>
 </div> -->
 
 
@@ -43,7 +43,7 @@ See the <a href="/students">Students</a> page for details. </medium>
     <a href="https://luddy.iu.edu/">Luddy School of Informatics, Computing, and Engineering</a>
     at 
     <a href="https://iu.edu/">Indiana University (IU)</a> 
-    starting Fall 2026!
+    as a Tenure-Track Assistant Professor starting Fall 2026!
   </li> -->
 
   <li>
@@ -52,12 +52,6 @@ See the <a href="/students">Students</a> page for details. </medium>
     University of Notre Dame, Missouri University of Science and Technology, 
     University of San Francisco, Montana State University, Virginia Tech, Indiana University,
     Toyota Technical Insitute in Chicago, Texas Tech, and UMass Amherst.
-  </li>
-
-  <li>
-    <strong>Jan 2026:</strong>
-    I gave a talk on <i>Collaborative Active Learning for Robots</i> at the 
-    IRoM Lab at Princeton University, thank you Ani for hosting me!
   </li>
 
   <li>
@@ -70,6 +64,12 @@ See the <a href="/students">Students</a> page for details. </medium>
       HRI 2026
     </a>
     with wonderful co-organizers Bahar Irfan, Rajat Kumar Jenamani, Ali Ayub, Nikhil Churamani, Silvia Rossi.
+  </li>
+
+  <li>
+    <strong>Jan 2026:</strong>
+    I gave a talk on <i>Collaborative Active Learning for Robots</i> at the 
+    IRoM Lab at Princeton University, thank you Anirudha Majumdar for hosting me!
   </li>
 
   <li>
