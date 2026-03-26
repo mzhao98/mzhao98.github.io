@@ -85,6 +85,9 @@
 <loc>http://localhost:4000/markdown/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/misc/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/non-menu-page/</loc>
 </url>
 <url>
@@ -129,8 +132,16 @@
 <lastmod>2024-11-21T02:59:58+00:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/files/MichelleZhao_teaching_statement.pdf</loc>
+<lastmod>2026-03-26T08:52:27+00:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/files/Michelle_Zhao_March2026.pdf</loc>
 <lastmod>2026-03-26T06:15:30+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/files/mz_the_academic_job_market.pdf</loc>
+<lastmod>2026-03-26T09:26:12+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/files/paper1.pdf</loc>

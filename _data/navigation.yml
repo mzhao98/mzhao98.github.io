@@ -17,3 +17,6 @@ main:
     
   - title: "Bio"
     url: /bio/
+
+  - title: "Miscellaneous"
+    url: /misc/
