@@ -18,7 +18,7 @@ by the [National Defense Science and Engineering Graduate (NDSEG) Fellowship](ht
 **Research**
 
 My research interests lie in the areas of interactive machine learning, reinforcement learning,
-and human robot interaction. I'm interested in developing algorithms to enable fluent human-robot coordination and collaboration (see [2-page research statement](files/MZ_research_statement_oct24.pdf)). 
+and human robot interaction. I'm interested in developing algorithms to enable fluent, bidirectional human-robot learning and collaboration (see [2-page research statement](files/MZ_research_statement_oct24.pdf)). 
 
 My research develops data-driven robotic algorithms that learn effectively from human feedback. During my PhD, I developed uncertainty quantification algorithms that enable robots to self-assess when and why their policies are nonperformant, communicate insights with human teachers, and proactively ask for targeted feedback. Grounded in statistical uncertainty quantification and models of human cognition, my approaches embed collaboration into the learning process itself, making robot teaching more intuitive and transparent. My long-term goal is to build <strong>lifelong, collaborative intelligence</strong>: robotic partners that remain helpful even when imperfect, continually learning by shaping strategic human-robot interactions to improve their assistance.
 
