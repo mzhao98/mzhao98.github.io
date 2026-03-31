@@ -7,7 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I am a final-year PhD student in the Robotics Institute at Carnegie Mellon University. I am advised by
+<p class="announcement">
+In Fall 2026, I will be starting as an Assistant Professor of Computer Science in the Luddy School of Informatics, Computing, and Engineering at Indiana University Bloomington.
+</p>
+
+Currently, I am completing my PhD in the Robotics Institute at Carnegie Mellon University. I am advised by
 [Reid Simmons](https://www.ri.cmu.edu/ri-faculty/reid-simmons/) and
 [Henny Admoni](https://www.ri.cmu.edu/ri-faculty/henny-admoni/),
 and am part of the [Human and Robot Partners (HARP) Lab](https://harp.ri.cmu.edu) and
@@ -25,17 +29,17 @@ My PhD research develops data-driven robotic algorithms that learn effectively f
 I publish in journals and conferences for robotics, machine learning, and cognitive science, including RSS, ICRA, IROS, CoRL, HRI, TopiCS, and ICLR. Teaching and mentorship are very important to me, and students I have mentored have gone on to PhDs in HRI at University of Washington and Colorado School of Mines!
 
 
-<!-- <div class="recruiting-box">
+<div class="recruiting-box">
 📢 <strong>I am recruiting motivated Ph.D., M.S., and undergraduate students !</strong> <br>
 <medium>I am looking for students interested in robotics, human-robot/AI interaction, and interactive learning.
 See the <a href="/studentrecruitment">Student Recruitment</a> page for details. </medium>
-</div> -->
+</div>
 
 
 ## News
 <ul class="news-list">
 
-  <!-- <li>
+  <li>
     <strong>March 2026:</strong>
     I accepted an offer to join the 
     <a href="https://luddy.iu.edu/academics/units/computer-science.html">Department of Computer Science</a>
@@ -44,7 +48,7 @@ See the <a href="/studentrecruitment">Student Recruitment</a> page for details. 
     at 
     <a href="https://iu.edu/">Indiana University (IU)</a> 
     as a Tenure-Track Assistant Professor starting Fall 2026!
-  </li> -->
+  </li>
 
   <li>
     <strong>March 2026:</strong>
