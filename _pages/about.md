@@ -29,11 +29,11 @@ My PhD research develops data-driven robotic algorithms that learn effectively f
 I publish in journals and conferences for robotics, machine learning, and cognitive science, including RSS, ICRA, IROS, CoRL, HRI, TopiCS, and ICLR. Teaching and mentorship are very important to me, and students I have mentored have gone on to PhDs in HRI at University of Washington and Colorado School of Mines!
 
 
-<div class="recruiting-box">
+<!-- <div class="recruiting-box">
 📢 <strong>I am recruiting motivated Ph.D., M.S., and undergraduate students !</strong> <br>
 <medium>I am looking for students interested in robotics, human-robot/AI interaction, and interactive learning.
 See the <a href="/studentrecruitment">Student Recruitment</a> page for details. </medium>
-</div>
+</div> -->
 
 
 ## News
