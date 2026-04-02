@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-<p class="announcement">
+<!-- <p class="announcement">
 In Fall 2026, I will be starting as an Assistant Professor of Computer Science in the Luddy School of Informatics, Computing, and Engineering at Indiana University Bloomington.
-</p>
+</p> -->
 
 Currently, I am completing my PhD in the Robotics Institute at Carnegie Mellon University. I am advised by
 [Reid Simmons](https://www.ri.cmu.edu/ri-faculty/reid-simmons/) and
