@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-<!-- <p class="announcement">
+<p class="announcement">
 In Fall 2026, I will be starting as an Assistant Professor of Computer Science in the Luddy School of Informatics, Computing, and Engineering at Indiana University Bloomington.
-</p> -->
+</p>
 
 Currently, I am completing my PhD in the Robotics Institute at Carnegie Mellon University. I am advised by
 [Reid Simmons](https://www.ri.cmu.edu/ri-faculty/reid-simmons/) and
@@ -40,7 +40,7 @@ See the <a href="/studentrecruitment">Student Recruitment</a> page for details. 
 <ul class="news-list">
 
   <li>
-    <!-- <strong>March 2026:</strong>
+    <strong>March 2026:</strong>
     I accepted an offer to join the 
     <a href="https://luddy.iu.edu/academics/units/computer-science.html">Department of Computer Science</a>
     in the 
@@ -48,7 +48,7 @@ See the <a href="/studentrecruitment">Student Recruitment</a> page for details. 
     at 
     <a href="https://iu.edu/">Indiana University (IU)</a> 
     as a Tenure-Track Assistant Professor starting Fall 2026!
-  </li> -->
+  </li>
 
   <li>
     <strong>March 2026:</strong>
