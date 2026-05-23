@@ -1,0 +1,546 @@
+---
+layout: archive
+title: "Research"
+permalink: /research/
+author_profile: true
+---
+
+<style>
+  /* ---------- intro + overview ---------- */
+  .research-tagline {
+    font-family: "Palatino Linotype", "Palatino", Georgia, serif;
+    font-size: 1.15em;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+    color: #281c1f;
+  }
+
+  .research-overview {
+    margin: 0 0 2.5em 0;
+    text-align: center;
+  }
+
+  .research-overview img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: #f4f4f4;
+  }
+
+  .research-overview.large img {
+    max-width: 800px;
+  }
+
+  .research-overview figcaption {
+    font-family: "Palatino Linotype", "Palatino", Georgia, serif;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    max-width: 600px;
+    margin: 0.5em auto 0 auto;
+  }
+
+  .research-overview.large figcaption {
+    max-width: 800px;
+  }
+
+  /* ---------- carousel ---------- */
+  .carousel {
+    position: relative;
+    margin: 1em 0 0.5em 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;            /* Firefox */
+  }
+  .carousel-track::-webkit-scrollbar {
+    display: none;                    /* Chrome/Safari */
+  }
+
+  .panel {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25em;
+    padding: 1.5em;
+    box-sizing: border-box;
+    background: #fafafa;
+    border-radius: 8px;
+  }
+
+  .panel-media {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .panel-media.small {
+    max-width: 360px;
+  }
+
+  .panel-media-pair {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .panel-media-pair .panel-media-item {
+    flex: 0 0 auto;
+  }
+
+  .panel-media-pair video,
+  .panel-media-pair img {
+    height: 260px;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .panel-media-pair .panel-media-item:first-child video,
+  .panel-media-pair .panel-media-item:first-child img {
+    height: 180px;
+  }
+
+  @media (max-width: 700px) {
+    .panel-media-pair { flex-direction: column; }
+    .panel-media-pair video,
+    .panel-media-pair img {
+      height: auto;
+      width: 100%;
+      max-width: 360px;
+    }
+  }
+
+  .panel-media video,
+  .panel-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .panel-header,
+  .panel-content {
+    width: 100%;
+    max-width: 720px;
+    font-family: "Palatino Linotype", "Palatino", Georgia, serif;
+  }
+
+  .panel-header {
+    text-align: center;
+    margin-bottom: -0.25em;
+  }
+
+  .panel-header .topic-number {
+    font-size: 0.85em;
+    color: #7a0019;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+  }
+
+  .panel-header h2 {
+    font-family: "Palatino Linotype", "Palatino", Georgia, serif !important;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    color: #281c1f;
+    line-height: 1.25;
+  }
+
+  .panel-content p {
+    font-size: 1em;
+    line-height: 1.55;
+    margin: 0 0 0.7em 0;
+    color: #2a2a2a;
+  }
+
+  .panel-content .papers {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 0.4em;
+  }
+
+  .panel-content .papers a {
+    color: #7a0019;
+  }
+
+  /* ---------- carousel controls ---------- */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(40, 28, 31, 0.85);
+    color: #fff;
+    font-size: 1.6em;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.15s;
+  }
+  .carousel-btn:hover { background: #7a0019; }
+  .carousel-btn:disabled { opacity: 0.3; cursor: default; }
+  .carousel-prev { left: -22px; }
+  .carousel-next { right: -22px; }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    margin: 1em 0 2em 0;
+  }
+  .carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .carousel-dots .dot:hover { background: #999; }
+  .carousel-dots .dot.active {
+    background: #7a0019;
+    transform: scale(1.3);
+  }
+
+  .panel-counter {
+    text-align: center;
+    font-family: "Palatino Linotype", "Palatino", Georgia, serif;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: -0.5em;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 800px) {
+    .panel { padding: 1em; }
+    .panel-content h2 { font-size: 1.25em; }
+    .carousel-prev { left: 4px; }
+    .carousel-next { right: 4px; }
+    .carousel-btn { width: 36px; height: 36px; font-size: 1.3em; }
+  }
+</style>
+
+<p class="research-tagline">
+  From household robots to AI assistants, intelligent systems that operate in the real world must 
+  learn continually from the people they serve. My research asks the question: <strong>how can
+  robots learn effectively from human partners when feedback is sparse, imperfect, and constantly
+  evolving?</strong> To address this challenge, I develop algorithms that enable robots to assess their
+  own uncertainty, recognize when they are misaligned with human goals, and determine when to 
+  seek assistance. I study (1) how robots can estimate uncertainty and detect failure in black-box robot policies, 
+  (2) how robots can detect misalignment with human intent, 
+  and (3) how robots can actively solicit corrective feedback, while (4) designing interaction mechanisms that make 
+  intervention and learning more intuitive for human teachers.
+</p>
+
+<figure class="research-overview large">
+  <img src="{{ base_path }}/images/research_overview_fig1.png" alt="Research overview, figure 1">
+  <!-- <figcaption>
+    Six threads of my research, organized around the loop between a robot learner and a human partner.
+  </figcaption> -->
+</figure>
+
+<p class="research-tagline">
+  Robots should be able to ongoingly receive human specification,
+  detect when their learned policies fail, reason about when and why human input is needed, incorporate demonstrations and 
+  corrections into future behavior, and adapt to evolving human preferences over time.
+</p>
+
+
+<figure class="research-overview">
+  <img src="{{ base_path }}/images/research_overview_fig2.png" alt="Research overview, figure 2">
+  <figcaption>
+    Continual co-learning loop between a robot learner and a human partner.
+  </figcaption>
+</figure>
+
+<div class="carousel" id="research-carousel">
+  <button class="carousel-btn carousel-prev" aria-label="Previous topic">&lsaquo;</button>
+
+  <div class="carousel-track">
+
+    <section class="panel">
+      <div class="panel-header">
+        <div class="topic-number">Topic 1 of 6</div>
+        <h2>Interactive Learning from Human Feedback</h2>
+      </div>
+      <div class="panel-media small">
+        <video autoplay loop muted playsinline preload="metadata"
+               poster="{{ base_path }}/images/loops.png">
+          <source src="{{ base_path }}/videos/interactive_learning.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="panel-content">
+        <p>
+          Robots deployed in the real world face distribution shift, novel tasks, and
+          shifting user preferences. The most reliable source of correction
+          is the human in the loop. And we can use human correction to help robots detect when their action predictions
+          are misaligned with human intent. My work develops algorithms that let robots learn
+          continually from rich human feedback: demonstrations, corrections, and
+          preferences.
+        </p>
+        <p>
+          A central challenge is that the human teacher is not a static oracle. Their
+          attention is intermittent, their feedback can be noisy or contradictory, and
+          their goals can change mid-deployment. And even after training a policy, the robot policy might still fail!
+          I design learning procedures that are
+          robust to these realities, and allocate human input to where it is most effectively spent.
+        </p>
+        <p class="papers">
+          Relevant work:
+          <a href="https://arxiv.org/abs/2505.00490">Optimal Interactive Learning on the Job via Facility Location Planning</a> (RSS 2025);
+          <a href="https://arxiv.org/abs/2410.08852">Conformalized Interactive Imitation Learning</a> (ICLR 2025);
+          <a href="https://www.scitepress.org/Papers/2025/131902/131902.pdf">LLMs for Preference-Based Sequence Prediction</a> (ICAART 2025).
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div class="topic-number">Topic 2 of 6</div>
+        <h2>Uncertainty Quantification for Robot Policies</h2>
+      </div>
+      <div class="panel-media">
+        <video autoplay loop muted playsinline preload="metadata"
+               poster="{{ base_path }}/images/con_teleop.png">
+          <source src="{{ base_path }}/videos/calibrated_intervals_conf_teleop.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="panel-content">
+        <p>
+          How does a black-box robot policy know when it doesn't know?
+          I use conformal prediction techniques to
+          give robot policies calibrated confidence over their own decisions 
+          across both teleoperated assistance and imitation-learned policies.
+        </p>
+        <p>
+          This lets robots flag risky states <em>before</em> acting on them, defer to
+          a human when out of their depth, and ask for help in a way that preserves
+          task progress rather than interrupts it. The aim is to move beyond
+          best-effort autonomy toward robots that are honest about the limits of
+          what they have learned.
+        </p>
+        <p class="papers">
+          Relevant work:
+          <a href="https://arxiv.org/abs/2406.07767">Conformalized Teleoperation</a> (RSS 2025);
+          <a href="https://arxiv.org/abs/2410.08852">Conformalized Interactive Imitation Learning</a> (ICLR 2025).
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div class="topic-number">Topic 3 of 6</div>
+        <h2>Communicating Robot Capabilities with Humans</h2>
+      </div>
+      <div class="panel-media-pair">
+        <div class="panel-media-item">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="{{ base_path }}/videos/communicating_unc.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="panel-media-item">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="{{ base_path }}/videos/strat_explanations.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="panel-content">
+        <p>
+          How does a human know how to use a robot when they don't know what it is capable of?
+          Robots capable of multiple skills or strategies need to communicate their capabilities 
+          to human teammates, so the human align complementary contributions and know when to step in. 
+          And when robots are uncertain, they need to explain what they're uncertain about and why, 
+          so the human can provide feedback that actually helps.
+        </p>
+        <p>
+          This work develops methods for robots to explain their high-level
+          strategies and behavioral preferences to human teammates, making
+          collaboration more legible and predictable. Afterwards, humans can 
+          inform the robot how they want the robot to behave, and the robot can adapt to meet those expectations.
+        </p>
+        <p class="papers">
+          Relevant work:
+          <a href="https://arxiv.org/abs/2311.11955">Multi-Agent Strategy Explanations for Human-Robot Collaboration</a> (ICRA 2024).
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div class="topic-number">Topic 4 of 6</div>
+        <h2>Active Learning on the Job</h2>
+      </div>
+      <div class="panel-media">
+        <video autoplay loop muted playsinline preload="metadata"
+               poster="{{ base_path }}/images/baisl.png">
+          <source src="{{ base_path }}/videos/multitask_teaching.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="panel-content">
+        <p>
+          When a robot is already deployed, every query to a human teammate has a
+          cost: it interrupts the task, fragments the user's attention, and
+          consumes time. 
+        </p>
+        <p>
+          I design algorithms that decide <em>when</em> and <em>what</em> to ask in
+          deployment, framing query selection as a planning problem that balances
+          progress across a multitask sequence, the marginal value of new information, and the teacher's
+          limited bandwidth. The result is robots that improve over the course of a
+          deployment without wearing out the people they're trying to help.
+        </p>
+        <p class="papers">
+          Relevant work:
+          <a href="https://arxiv.org/abs/2505.00490">Optimal Interactive Learning on the Job via Facility Location Planning</a> (RSS 2025).
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div class="topic-number">Topic 5 of 6</div>
+        <h2>Coordination &amp; Adaptation in Human-Robot Teams</h2>
+      </div>
+      <div class="panel-media small">
+        <video autoplay loop muted playsinline preload="metadata"
+               poster="{{ base_path }}/images/teaching_diagram.png">
+          <source src="{{ base_path }}/videos/multiple_strategies.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="panel-content">
+        <p>
+          Effective teammates model each other and adapt. Collaborative robots need to infer
+          their partner's strategy, communicate their own intentions, and adjust their
+          behavior to support fluent joint action.
+        </p>
+        <p>
+          My work in this thread spans collaborative manipulation, shared autonomy,
+          and assistive robotics, and asks how strategy matching, intent explanation,
+          and contribution-preference modeling can be operationalized in real
+          collaborative tasks. The throughline is that robots that model the collaboration
+          as a user-desired objective over robot and human actions can better align with human goals and adapt to evolving preferences over time.
+        </p>
+        <p class="papers">
+          Relevant work:
+          <a href="https://arxiv.org/abs/2311.11955">Multi-Agent Strategy Explanations for HRC</a> (ICRA 2024);
+          <a href="https://proceedings.mlr.press/v229/zhao23b.html">Learning Human Contribution Preferences</a> (CoRL 2023);
+          <a href="https://arxiv.org/abs/2210.15099">Coordination with Humans via Strategy Matching</a> (IROS 2022);
+          <a href="https://onlinelibrary.wiley.com/doi/10.1111/tops.12633">The Role of Adaptation in Human-AI Teaming</a> (topiCS);
+          <a href="https://www.sciencedirect.com/science/article/pii/S0747563222003442">Teaching Agents to Understand Teamwork</a> (Computers in Human Behavior, 2022).
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div class="topic-number">Topic 6 of 6</div>
+        <h2>Robot Learning from Heterogeneous and Novice Users</h2>
+      </div>
+      <div class="panel-media small">
+        <video autoplay loop muted playsinline preload="metadata"
+               poster="{{ base_path }}/images/cdagger_real.png">
+          <source src="{{ base_path }}/videos/dagger.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="panel-content">
+        <p>
+          Teaching a robot isn't easy! People naturally differ in the ways they perform a task,
+          but also how capable they are of teleoperating a robot, providing demonstrations, or giving feedback. 
+          Robots that learn from people need to be robust to this heterogeneity, and adapt to the needs of novice users.
+        </p>
+        <p>
+          Aggregating corrective data 
+          from multiple teachers can lead to worse performance than learning from a single teacher, 
+          and that the key to success is to separate what data is beneficial from what is not,
+          and detecting when new input is misaligned with what a robot policy has already seen. 
+        </p>
+        <p class="papers">
+          Relevant work:
+          <a href="https://arxiv.org/abs/2406.07767">Conformalized Teleoperation: Confidently Mapping Human Inputs to High-Dimensional Robot Actions</a> (RSS 2025).
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <button class="carousel-btn carousel-next" aria-label="Next topic">&rsaquo;</button>
+</div>
+
+<div class="carousel-dots" id="carousel-dots">
+  <button class="dot active" aria-label="Go to topic 1"></button>
+  <button class="dot" aria-label="Go to topic 2"></button>
+  <button class="dot" aria-label="Go to topic 3"></button>
+  <button class="dot" aria-label="Go to topic 4"></button>
+  <button class="dot" aria-label="Go to topic 5"></button>
+  <button class="dot" aria-label="Go to topic 6"></button>
+</div>
+
+<script>
+  (function() {
+    var carousel = document.getElementById('research-carousel');
+    if (!carousel) return;
+    var track = carousel.querySelector('.carousel-track');
+    var panels = track.querySelectorAll('.panel');
+    var prev = carousel.querySelector('.carousel-prev');
+    var next = carousel.querySelector('.carousel-next');
+    var dots = document.querySelectorAll('#carousel-dots .dot');
+
+    function currentIndex() {
+      return Math.round(track.scrollLeft / track.clientWidth);
+    }
+
+    function goTo(i) {
+      i = Math.max(0, Math.min(panels.length - 1, i));
+      track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+    }
+
+    function updateState() {
+      var idx = currentIndex();
+      dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === idx);
+      });
+      prev.disabled = idx === 0;
+      next.disabled = idx === panels.length - 1;
+    }
+
+    prev.addEventListener('click', function() { goTo(currentIndex() - 1); });
+    next.addEventListener('click', function() { goTo(currentIndex() + 1); });
+    dots.forEach(function(d, i) {
+      d.addEventListener('click', function() { goTo(i); });
+    });
+
+    var scrollTimer;
+    track.addEventListener('scroll', function() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(updateState, 60);
+    });
+    window.addEventListener('resize', function() {
+      goTo(currentIndex());
+    });
+
+    updateState();
+  })();
+</script>
