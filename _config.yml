@@ -25,11 +25,11 @@ author:
   avatar           : "circular_prof_pic.png"
   name             : "Michelle Zhao"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Candidate at CMU"
-  location         :
-  employer         : "Carnegie Mellon University"
+  bio              : "Assistant Professor of CS at Indiana University"
+  location         : "Bloomington, IN"
+  employer         : "Indiana University Bloomington"
   uri              : # URL
-  email            : "mzhao2@andrew.cmu.edu"
+  email            : "zhaomich@iu.edu"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
