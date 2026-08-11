@@ -32,7 +32,7 @@ I publish in journals and conferences for robotics, machine learning, and cognit
 <div class="recruiting-box">
 📢 <strong>I am recruiting motivated Ph.D., M.S., and undergraduate students !</strong> <br>
 <medium>I am looking for students interested in robotics, human-robot/AI interaction, and interactive learning.
-See the <a href="https://reliable-interactive-autonomy-lab.net" target="_blank" rel="noopener">Reliable Interactive Autonomy Lab</a> page for details. </medium>
+See the <a href="https://reliable-interactive-autonomy-lab.github.io/" target="_blank" rel="noopener">Reliable Interactive Autonomy Lab</a> page for details. </medium>
 </div>
 
 
