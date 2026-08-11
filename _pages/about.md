@@ -8,14 +8,12 @@ redirect_from:
 ---
 
 <p class="announcement">
-In Fall 2026, I will be starting as an Assistant Professor of Computer Science in the Luddy School of Informatics, Computing, and Engineering at Indiana University Bloomington.
+I am an Assistant Professor of Computer Science in the Luddy School of Informatics, Computing, and Engineering at Indiana University Bloomington.
 </p>
 
-Currently, I am completing my PhD in the Robotics Institute at Carnegie Mellon University. I am advised by
+I received my PhD in the Robotics Institute at Carnegie Mellon University, where I was advised by
 [Reid Simmons](https://www.ri.cmu.edu/ri-faculty/reid-simmons/) and
-[Henny Admoni](https://www.ri.cmu.edu/ri-faculty/henny-admoni/),
-and am part of the [Human and Robot Partners (HARP) Lab](https://harp.ri.cmu.edu) and
-[Reliable Autonomous Systems Lab (RASL)](https://www.ri.cmu.edu/robotics-groups/reliable-autonomous-systems-lab/). My work has been generously supported
+[Henny Admoni](https://www.ri.cmu.edu/ri-faculty/henny-admoni/). My thesis, Integrating Learning and Collaboration for Human-Robot Alignment, presented a collection of methods towards how robots can learn from human feedback through interactive learning, uncertainty quantification, and human-centered collaboration (Thesis Committee: [Henny Admoni](https://www.ri.cmu.edu/ri-faculty/henny-admoni/), [Reid Simmons](https://www.ri.cmu.edu/ri-faculty/reid-simmons/), [Andrea Bajcsy](https://www.cs.cmu.edu/~abajcsy/), [Anirudha Majumdar](https://irom-lab.princeton.edu/majumdar/)). My work has been generously supported
 by the [National Defense Science and Engineering Graduate (NDSEG) Fellowship](https://ndseg.org/), an Uber PhD Fellowship, and a Siebel Scholarship. Previously, I graduated from Caltech with a B.S. in Computer Science where I worked with [Yuxin Chen](https://yuxinchen.org/) and [Yisong Yue](http://www.yisongyue.com/) on machine teaching, and [Soon-Jo Chung](https://www.eas.caltech.edu/people/sjchung) on distributed control.
 
 
@@ -31,16 +29,17 @@ I publish in journals and conferences for robotics, machine learning, and cognit
 [See research topics →](/research/)
 
 
-<!-- <div class="recruiting-box">
+<div class="recruiting-box">
 📢 <strong>I am recruiting motivated Ph.D., M.S., and undergraduate students !</strong> <br>
 <medium>I am looking for students interested in robotics, human-robot/AI interaction, and interactive learning.
-See the <a href="/studentrecruitment">Student Recruitment</a> page for details. </medium>
-</div> -->
+See the <a href="https://reliable-interactive-autonomy-lab.net" target="_blank" rel="noopener">Reliable Interactive Autonomy Lab</a> page for details. </medium>
+</div>
 
 
 <details class="news-dropdown">
   <summary>News</summary>
   <ul class="news-list">
+    <li><strong>Jul 2026:</strong> Defended my PhD at CMU! My thesis, Integrating Learning and Collaboration for Human-Robot Alignment, explores how robots can learn from human feedback through interactive learning, uncertainty quantification, and human-centered collaboration.</li>
     <li><strong>Mar 2026:</strong> Accepted a Tenure-Track Assistant Professor offer at <a href="https://luddy.iu.edu/academics/units/computer-science.html">Indiana University Luddy</a>, starting Fall 2026.</li>
     <li><strong>Mar 2026:</strong> Gave a talk on <i>Collaborative Active Learning for Robots</i> at Notre Dame, Missouri S&amp;T, USF, Montana State, Virginia Tech, IU, TTIC, Texas Tech, and UMass Amherst.</li>
     <li><strong>Mar 2026:</strong> Co-organized the <a href="https://leap-hri.github.io/" target="_blank">LEAP-HRI Workshop</a> at <a href="https://humanrobotinteraction.org/2026/" target="_blank">HRI 2026</a>.</li>

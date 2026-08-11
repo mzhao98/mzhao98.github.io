@@ -21,5 +21,8 @@ main:
   - title: "Bio"
     url: /bio/
 
-  - title: "Miscellaneous"
+  - title: "RIA Lab"
+    url: https://reliable-interactive-autonomy-lab.net
+
+  - title: "Misc"
     url: /misc/
