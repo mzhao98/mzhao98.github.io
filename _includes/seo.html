@@ -48,7 +48,12 @@
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
-{% if page.excerpt %}
+{% comment %}
+  Gate on seo_description (page.description > page.excerpt > site.description)
+  rather than page.excerpt, so every page emits a description, not just the
+  ones that happen to have an excerpt.
+{% endcomment %}
+{% if seo_description %}
   <meta property="og:description" name="description" content="{{ seo_description }}">
 {% endif %}
 

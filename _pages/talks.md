@@ -3,6 +3,7 @@ layout: archive
 title: "Talks and presentations"
 permalink: /talks/
 author_profile: true
+description: "Invited talks and conference presentations by Michelle Zhao on conformalized teleoperation, uncertainty quantification, and active learning for robots."
 ---
 
 ### Recent Talks and presentations (see CV for more complete list)
