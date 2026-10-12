@@ -118,6 +118,12 @@
 <loc>http://localhost:4000/talks/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/teaching/hri-spring2025/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/teaching/hri-spring2027/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/teaching/</loc>
 </url>
 <url>
@@ -129,6 +135,10 @@
 <url>
 <loc>http://localhost:4000/files/MZ_CV.pdf</loc>
 <lastmod>2025-03-05T18:08:23+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/files/MZ_CV_2026.pdf</loc>
+<lastmod>2026-08-12T16:27:25+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/files/MZ_research_statement_oct24.pdf</loc>
